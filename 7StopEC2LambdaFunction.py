@@ -8,5 +8,5 @@ def lambda_handler(event, context):
     for instance in instances:
         id=instance.id
         ec2.instances.filter(InstanceIds=[id]).stop()
-        print("Instance ID is started :- "+instance.id)
+        print("Instance ID has Stopped :- "+instance.id)
     return "success"
